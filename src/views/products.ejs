@@ -95,7 +95,7 @@
             <hr class="ms-3">
             <button type="button" class="btn btn-login mb-5 ms-4">Sair</button>
         </nav>
-
+        <!-- MODAL DO BOTAO ADICIONAR -->
         <div class="modal fade" id="modal-add" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -117,7 +117,7 @@
                     <div class="modal-body">
                         <form class="form-floating">
                             <div class="d-flex flex-column justify-content-center align-items-center">
-                                
+
                                 <div class="form-floating floating-add  mb-1">
                                     <input type="text" class="form-control" id="floatingText"
                                         placeholder="Nome do produto">
@@ -135,7 +135,7 @@
                                         placeholder="Nome do produto" min="1">
                                     <label for="floatingQuant">Quantidade</label>
                                 </div>
-                                
+
                                 <div class="form-floating floating-add mb-1">
                                     <input type="text" class="form-control" id="floatingPrice"
                                         placeholder="Nome do produto">
@@ -145,15 +145,155 @@
                                 <div class="mb-3">
                                     <label for="formFile" class="form-label">Selecione uma imagem</label>
                                     <input class="form-control" type="file" id="formFile">
-                                  </div>
+                                </div>
 
-                                  <button type="button" class="btn button-add">Adicionar</button>
+                                <button type="button" class="btn button-add">Adicionar</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- FIM DA MODAL DO BOTAO ADICIONAR -->
+
+        <!-- MODAL VISUALIZAR -->
+        <div class="modal fade" id="modal-view" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn button-back" data-bs-dismiss="modal">
+                            <span>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.75 15H6.25" stroke="#1E2526" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15 23.75L6.25 15L15 6.25" stroke="#1E2526" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <h5 class="modal-title n-product">Visualizar produto</h5>
+
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-floating">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+
+                                <div class="form-floating floating-add  mb-1">
+                                    <input type="text" class="form-control" id="floatingText"
+                                        placeholder="Nome do produto" value="Café Expresso - Forte" disabled readonly>
+                                    <label for="floatingText">Nome do produto</label>
+                                </div>
+
+                                <div class="form-floating floating-add mb-1">
+                                    <textarea class="form-control" placeholder="Descrição" id="textarea-modal"
+                                        style="height: 100px" disabled readonly>
+
+                                    </textarea>
+                                    <label for="textarea-modal">Descrição</label>
+                                </div>
+
+                                <div class="form-floating floating-add mb-1">
+                                    <input type="number" class="form-control" id="floatingQuant"
+                                        placeholder="Nome do produto" min="1" value="03" disabled readonly>
+                                    <label for="floatingQuant">Quantidade</label>
+                                </div>
+
+                                <div class="form-floating floating-add mb-1">
+                                    <input type="text" class="form-control" id="floatingPrice"
+                                        placeholder="Nome do produto" value="R$ 9,90" disabled readonly>
+                                    <label for="floatingPrice">Preço</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Selecione uma imagem</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM MODAL VISUALIZAR -->
+        <!-- MODAL EDITAR -->
+        <div class="modal fade" id="modal-edit" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn button-back" data-bs-dismiss="modal">
+                            <span>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.75 15H6.25" stroke="#1E2526" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15 23.75L6.25 15L15 6.25" stroke="#1E2526" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <h5 class="modal-title n-product">Editar produto</h5>
+
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-floating">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+
+                                <div class="form-floating floating-add  mb-1">
+                                    <input type="text" class="form-control" id="floatingText"
+                                        placeholder="Nome do produto" value="Café Expresso - Forte">
+                                    <label for="floatingText">Nome do produto</label>
+                                </div>
+
+                                <div class="form-floating floating-add mb-1">
+                                    <textarea class="form-control" placeholder="Descrição" id="textarea-modal"
+                                        style="height: 100px"></textarea>
+                                    <label for="textarea-modal">Descrição</label>
+                                </div>
+
+                                <div class="form-floating floating-add mb-1">
+                                    <input type="number" class="form-control" id="floatingQuant"
+                                        placeholder="Nome do produto" min="1" value="03">
+                                    <label for="floatingQuant">Quantidade</label>
+                                </div>
+
+                                <div class="form-floating floating-add mb-1">
+                                    <input type="text" class="form-control" id="floatingPrice"
+                                        placeholder="Nome do produto" value="R$ 9,90">
+                                    <label for="floatingPrice">Preço</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Selecione uma imagem</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                </div>
+                                <button type="button" class="btn button-add">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM MODAL EDITAR -->
+        <!-- MODAL EXCLUIR -->
+        <div class="modal fade" id="modal-delete" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  mdelete">
+                    <div class="modal-header  mhddelete">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center">
+                        <h3>Tem certeza que deseja excluir?</h3>
+                      </div>
+                      <div class="modal-footer d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn btn-mbackdelete" data-bs-dismiss="modal">Voltar</button>
+                        <button type="button" class="btn btn-mdelete">Excluir</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM MODAL EXCLUIR -->
 
         <div class="d-flex flex-column align-items-center" style="width: 100%;">
             <div class="d-flex justify-content-end" style="width: 100%; max-width: 920px;">
@@ -180,41 +320,50 @@
                         <td>20</td>
                         <td>R$5,90</td>
                         <td>
-                            <span><svg width="35" height="35" viewBox="0 0 35 35" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M1.45831 17.5C1.45831 17.5 7.29165 5.83334 17.5 5.83334C27.7083 5.83334 33.5416 17.5 33.5416 17.5C33.5416 17.5 27.7083 29.1667 17.5 29.1667C7.29165 29.1667 1.45831 17.5 1.45831 17.5Z"
-                                        stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M17.5 21.875C19.9162 21.875 21.875 19.9162 21.875 17.5C21.875 15.0838 19.9162 13.125 17.5 13.125C15.0838 13.125 13.125 15.0838 13.125 17.5C13.125 19.9162 15.0838 21.875 17.5 21.875Z"
-                                        stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                            <span>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#modal-view">
+                                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.45831 17.5C1.45831 17.5 7.29165 5.83334 17.5 5.83334C27.7083 5.83334 33.5416 17.5 33.5416 17.5C33.5416 17.5 27.7083 29.1667 17.5 29.1667C7.29165 29.1667 1.45831 17.5 1.45831 17.5Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M17.5 21.875C19.9162 21.875 21.875 19.9162 21.875 17.5C21.875 15.0838 19.9162 13.125 17.5 13.125C15.0838 13.125 13.125 15.0838 13.125 17.5C13.125 19.9162 15.0838 21.875 17.5 21.875Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
                             </span>
-                            <span><svg width="35" height="35" viewBox="0 0 35 35" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.5 29.1667H30.625" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M24.0625 5.10417C24.6427 4.52401 25.4295 4.19807 26.25 4.19807C26.6563 4.19807 27.0585 4.27809 27.4339 4.43356C27.8092 4.58903 28.1502 4.8169 28.4375 5.10417C28.7248 5.39143 28.9526 5.73247 29.1081 6.1078C29.2636 6.48313 29.3436 6.88541 29.3436 7.29167C29.3436 7.69792 29.2636 8.1002 29.1081 8.47553C28.9526 8.85087 28.7248 9.1919 28.4375 9.47917L10.2083 27.7083L4.375 29.1667L5.83333 23.3333L24.0625 5.10417Z"
-                                        stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                            <span>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#modal-edit">
+                                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.5 29.1667H30.625" stroke="white" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M24.0625 5.10417C24.6427 4.52401 25.4295 4.19807 26.25 4.19807C26.6563 4.19807 27.0585 4.27809 27.4339 4.43356C27.8092 4.58903 28.1502 4.8169 28.4375 5.10417C28.7248 5.39143 28.9526 5.73247 29.1081 6.1078C29.2636 6.48313 29.3436 6.88541 29.3436 7.29167C29.3436 7.69792 29.2636 8.1002 29.1081 8.47553C28.9526 8.85087 28.7248 9.1919 28.4375 9.47917L10.2083 27.7083L4.375 29.1667L5.83333 23.3333L24.0625 5.10417Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
                             </span>
-                            <span><svg width="35" height="35" viewBox="0 0 35 35" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.375 8.75H7.29167H30.625" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M11.6667 8.75V5.83333C11.6667 5.05978 11.974 4.31792 12.521 3.77094C13.0679 3.22395 13.8098 2.91666 14.5834 2.91666H20.4167C21.1902 2.91666 21.9321 3.22395 22.4791 3.77094C23.0261 4.31792 23.3334 5.05978 23.3334 5.83333V8.75M27.7084 8.75V29.1667C27.7084 29.9402 27.4011 30.6821 26.8541 31.2291C26.3071 31.776 25.5652 32.0833 24.7917 32.0833H10.2084C9.43481 32.0833 8.69294 31.776 8.14596 31.2291C7.59898 30.6821 7.29169 29.9402 7.29169 29.1667V8.75H27.7084Z"
-                                        stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M14.5833 16.0417V24.7917" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M20.4167 16.0417V24.7917" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                            <span>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#modal-delete">
+                                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.375 8.75H7.29167H30.625" stroke="white" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M11.6667 8.75V5.83333C11.6667 5.05978 11.974 4.31792 12.521 3.77094C13.0679 3.22395 13.8098 2.91666 14.5834 2.91666H20.4167C21.1902 2.91666 21.9321 3.22395 22.4791 3.77094C23.0261 4.31792 23.3334 5.05978 23.3334 5.83333V8.75M27.7084 8.75V29.1667C27.7084 29.9402 27.4011 30.6821 26.8541 31.2291C26.3071 31.776 25.5652 32.0833 24.7917 32.0833H10.2084C9.43481 32.0833 8.69294 31.776 8.14596 31.2291C7.59898 30.6821 7.29169 29.9402 7.29169 29.1667V8.75H27.7084Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M14.5833 16.0417V24.7917" stroke="white" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M20.4167 16.0417V24.7917" stroke="white" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
                             </span>
                         </td>
                     </tr>
