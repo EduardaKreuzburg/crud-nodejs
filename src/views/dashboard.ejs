@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="http://localhost:3000/css/main.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Dashboard - Pause-Café</title>
+    <link rel="shortcut icon" href="http://localhost:3000/images/icon-coffee.svg">
+</head>
+
+<body>
+
+    <div class="mt-3 ms-3">
+        <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="37.5" cy="37.5" r="37.5" fill="#253438" />
+            <path
+                d="M47 30.3333H48.6667C50.4348 30.3333 52.1305 31.0357 53.3807 32.2859C54.631 33.5362 55.3333 35.2319 55.3333 37C55.3333 38.7681 54.631 40.4638 53.3807 41.714C52.1305 42.9643 50.4348 43.6667 48.6667 43.6667H47"
+                stroke="#71BBC9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M20.3334 30.3333H47V45.3333C47 47.1014 46.2977 48.7971 45.0474 50.0474C43.7972 51.2976 42.1015 52 40.3334 52H27C25.2319 52 23.5362 51.2976 22.286 50.0474C21.0358 48.7971 20.3334 47.1014 20.3334 45.3333V30.3333Z"
+                stroke="#71BBC9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M27 18.6667V23.6667" stroke="#71BBC9" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M33.6666 18.6667V23.6667" stroke="#71BBC9" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M40.3334 18.6667V23.6667" stroke="#71BBC9" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+
+    <main class="d-flex">
+        <nav class="ms-5" style=" width: 380px; margin-top: 104px;">
+            <ul style="color: aliceblue;">
+                <li>
+                    <a class="a-dash" href="http://localhost:3000/dashboard">
+                        <span>
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30 4.5H6C4.34315 4.5 3 5.84315 3 7.5V22.5C3 24.1569 4.34315 25.5 6 25.5H30C31.6569 25.5 33 24.1569 33 22.5V7.5C33 5.84315 31.6569 4.5 30 4.5Z"
+                                    stroke="#589CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 31.5H24" stroke="#589CA6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M18 25.5V31.5" stroke="#589CA6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a class="a-dash" href="http://localhost:3000/produtos">
+                        <span>
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 4.5H4.5V15H15V4.5Z" stroke="#589CA6" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M31.5 4.5H21V15H31.5V4.5Z" stroke="#589CA6" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M31.5 21H21V31.5H31.5V21Z" stroke="#589CA6" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15 21H4.5V31.5H15V21Z" stroke="#589CA6" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        Produtos
+                    </a>
+                </li>
+                <li>
+                    <a class="a-dash" href="http://localhost:3000/planos">
+                        <span>
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 1.5V34.5" stroke="#589CA6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M25.5 7.5H14.25C12.8576 7.5 11.5223 8.05312 10.5377 9.03769C9.55312 10.0223 9 11.3576 9 12.75C9 14.1424 9.55312 15.4777 10.5377 16.4623C11.5223 17.4469 12.8576 18 14.25 18H21.75C23.1424 18 24.4777 18.5531 25.4623 19.5377C26.4469 20.5223 27 21.8576 27 23.25C27 24.6424 26.4469 25.9777 25.4623 26.9623C24.4777 27.9469 23.1424 28.5 21.75 28.5H9"
+                                    stroke="#589CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                        Planos
+                    </a>
+                </li>
+            </ul>
+            <hr class="ms-3">
+            <button type="button" class="btn btn-login mb-5 ms-4">Sair</button>
+        </nav>
+
+        <div class="d-flex justify-content-center align-items-center" style=" width: 100%; margin-top: 176px;">
+
+            <div class="card cards-dash align-items-center justify-content-center">
+                <span class="icons-dash mt-3">
+                    <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.0833 8.125H8.125V27.0833H27.0833V8.125Z" stroke="#589CA6" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M56.875 8.125H37.9166V27.0833H56.875V8.125Z" stroke="#589CA6" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M56.875 37.9167H37.9166V56.875H56.875V37.9167Z" stroke="#589CA6" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M27.0833 37.9167H8.125V56.875H27.0833V37.9167Z" stroke="#589CA6" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <div class="card-body">
+                    <h5 class="card-title">Visualizar </br>produtos</h5>
+                </div>
+            </div>
+
+
+
+            <div class="card cards-dash align-items-center justify-content-center ms-5">
+                <span class="icons-dash mt-3">
+                    <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.5 13.5417V51.4583" stroke="#71BBC9" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M13.5417 32.5H51.4584" stroke="#71BBC9" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                </span>
+                <div class="card-body" data-bs-toggle="modal" data-bs-target="#modal-add">
+                    <h5 class="card-title">Novo </br>produto</h5>
+                </div>
+            </div>
+
+
+            <!--fim do card-->
+        </div>
+
+        <div class="modal fade" id="modal-add" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn button-back" data-bs-dismiss="modal">
+                            <span>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.75 15H6.25" stroke="#1E2526" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15 23.75L6.25 15L15 6.25" stroke="#1E2526" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <h5 class="modal-title n-product">Novo produto</h5>
+
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-floating">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                
+                                <div class="form-floating floating-add  mb-1">
+                                    <input type="text" class="form-control" id="floatingText"
+                                        placeholder="Nome do produto">
+                                    <label for="floatingText">Nome do produto</label>
+                                </div>
+
+                                <div class="form-floating floating-add mb-1">
+                                    <textarea class="form-control" placeholder="Descrição" id="textarea-modal"
+                                        style="height: 100px"></textarea>
+                                    <label for="textarea-modal">Descrição</label>
+                                </div>
+
+                                <div class="form-floating floating-add mb-1">
+                                    <input type="number" class="form-control" id="floatingQuant"
+                                        placeholder="Nome do produto" min="1">
+                                    <label for="floatingQuant">Quantidade</label>
+                                </div>
+                                
+                                <div class="form-floating floating-add mb-1">
+                                    <input type="text" class="form-control" id="floatingPrice"
+                                        placeholder="Nome do produto">
+                                    <label for="floatingPrice">Preço</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Selecione uma imagem</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                  </div>
+
+                                  <button type="button" class="btn button-add">Adicionar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
