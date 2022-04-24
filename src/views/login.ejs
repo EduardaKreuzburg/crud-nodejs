@@ -21,7 +21,7 @@
     <div class="icon d-flex justify-content-center my-5">
         <img src="http://localhost:3000/images/icon-coffee.svg">
     </div>
-    <form>
+    <form method="post" action="/login" >
 
         <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="inputs-size">
@@ -36,7 +36,7 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                    <input type="email" class="form-control mb-2" placeholder="Insira o email">
+                    <input type="email" class="form-control mb-2" name="email" placeholder="Insira o email" required>
                 </div>
             </div>
 
@@ -53,11 +53,11 @@
                             stroke="#589CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </span>
-                <input type="password" class="form-control mb-2" placeholder="Insira a senha">
+                <input type="password" class="form-control mb-2" name="password" placeholder="Insira a senha" required>
             </div>
             </div>
 
-            <button type="button" class="btn btn-login mb-5">Acessar</button>
+            <button type="submit" class="btn btn-login mb-5">Acessar</button>
 
             <a class="a-login" href="http://localhost:3000/registrar">Ainda não possui uma conta? Registre-se</a>
 

@@ -11,5 +11,20 @@ module.exports =  {
     } catch (error) {
       throw Error('ERROR: ' + error);
     }
+  },
+
+  auth: async (userData) => {
+    try {
+      const user = await User.findOne({
+        where: {
+          email: userData.email,
+          password: userData.password,
+        },
+      });
+
+      return !!user;
+    } catch (error) {
+      throw Error('ERROR: ' + error);
+    }
   }
 }

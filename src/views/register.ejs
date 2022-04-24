@@ -21,7 +21,7 @@
     <div class="icon d-flex justify-content-center my-5">
         <img src="http://localhost:3000/images/icon-coffee.svg">
     </div>
-    <form>
+    <form action="/registrar" method="post">
 
         <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="inputs-size">
@@ -39,7 +39,7 @@
                         </svg>
 
                     </span>
-                    <input type="text" class="form-control mb-2" placeholder="Informe seu Nome">
+                    <input type="text" class="form-control mb-2" placeholder="Informe seu Nome" name="name">
                 </div>
             </div>
             <div class="inputs-size">
@@ -54,7 +54,7 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                    <input type="email" class="form-control mb-2" placeholder="Informe seu Email">
+                    <input type="email" class="form-control mb-2" placeholder="Informe seu Email" name="email" required>
                 </div>
             </div>
             <div class="inputs-size">
@@ -70,7 +70,7 @@
                             stroke="#589CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </span>
-                <input type="password" class="form-control mb-2" placeholder="Informe a Senha">
+                <input type="password" class="form-control mb-2" placeholder="Informe a Senha" name="password" required>
                 </div>
             </div>
             <div class="inputs-size">
@@ -86,11 +86,11 @@
                             stroke="#589CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </span>
-                <input type="password" class="form-control mb-2" placeholder="Confirme a senha">
+                <input type="password" class="form-control mb-2" placeholder="Confirme a senha" name="confirmPassword" required>
                 </div>
             </div>
 
-            <button type="button" class="btn btn-login mb-5">Registrar</button>
+            <button type="submit" class="btn btn-login mb-5">Registrar</button>
 
             <a class="a-login" href="http://localhost:3000/login">Já possui conta? Acessar</a>
 
