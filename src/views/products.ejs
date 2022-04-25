@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="http://localhost:3000/css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Dashboard - Pause-Café</title>
-    <link rel="shortcut icon" href="http://localhost:3000/images/icon-coffee.svg">
+    <link rel="shortcut icon" href="/images/icon-coffee.svg">
 </head>
 
 <body>
@@ -42,7 +42,7 @@
         <nav class="ms-5" style=" width: 380px; margin-top: 104px;">
             <ul style="color: aliceblue;">
                 <li>
-                    <a class="a-dash" href="http://localhost:3000/dashboard">
+                    <a class="a-dash" href="/dashboard">
                         <span>
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="a-dash" href="http://localhost:3000/produtos">
+                    <a class="a-dash" href="/produtos">
                         <span>
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="a-dash" href="http://localhost:3000/planos">
+                    <a class="a-dash" href="/planos">
                         <span>
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +94,7 @@
                 </li>
             </ul>
             <hr class="ms-3">
-            <a href="http://localhost:3000/logout" class="btn btn-login mb-5 ms-4">Sair</a>
+            <a href="/logout" class="btn btn-login mb-5 ms-4">Sair</a>
         </nav>
         <!-- MODAL DO BOTAO ADICIONAR -->
         <div class="modal fade" id="modal-add" tabindex="-1" aria-hidden="true">
@@ -198,8 +198,7 @@
 
                                 <div class="mb-3">
                                     <img src="" alt="" srcset="" id="imageToShow" style="max-width: 144px;">
-                                    <label for="formFile" class="form-label">Selecione uma imagem</label>
-                                    <input class="form-control" type="file" id="formFile">
+                                
                                 </div>
 
                             </div>
@@ -233,28 +232,27 @@
                             <div class="d-flex flex-column justify-content-center align-items-center">
 
                                 <div class="form-floating floating-add  mb-1">
-                                    <input type="text" class="form-control" id="floatingTextEdit" placeholder="Nome do produto" value="">
+                                    <input type="text" class="form-control" id="floatingTextEdit" name="name" placeholder="Nome do produto" value="">
                                     <label for="floatingTextEdit">Nome do produto</label>
                                 </div>
 
                                 <div class="form-floating floating-add mb-1">
-                                    <textarea class="form-control" placeholder="Descrição" id="textareaModalEdit" style="height: 100px"></textarea>
+                                    <textarea class="form-control" placeholder="Descrição" name="description" id="textareaModalEdit" style="height: 100px"></textarea>
                                     <label for="textareaModalEdit">Descrição</label>
                                 </div>
 
                                 <div class="form-floating floating-add mb-1">
-                                    <input type="number" class="form-control" id="floatingQuantEdit" placeholder="Quantidade" min="1" value="">
+                                    <input type="number" class="form-control" name="quantity" id="floatingQuantEdit" placeholder="Quantidade" min="1" value="">
                                     <label for="floatingQuantEdit">Quantidade</label>
                                 </div>
 
                                 <div class="form-floating floating-add mb-1">
-                                    <input type="text" class="form-control" id="floatingPriceEdit" placeholder="Preço" value="">
+                                    <input type="text" class="form-control" name="price" id="floatingPriceEdit" placeholder="Preço" value="">
                                     <label for="floatingPriceEdit">Preço</label>
                                 </div>
 
                                 <div class="mb-3">
                                     <img src="" alt="" srcset="" id="imageToEdit" style="max-width: 144px;">
-                                    <label for="formFile" class="form-label">Selecione uma imagem</label>
                                     <input class="form-control" type="file" name="image" id="formFile">
                                 </div>
                                 <button type="submit" class="btn button-add" >Salvar</button>

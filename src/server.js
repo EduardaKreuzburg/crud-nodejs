@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const formidable = require('formidable');
 const session = require('express-session');
@@ -9,7 +11,7 @@ const app = express();
 const UserController = require('./controllers/UserController');
 const ProductController = require('./controllers/ProductController');
 
-const PORT = 3000;
+const PORT = process.env.APP_PORT;
 
 app.set('view engine', 'ejs');
 
@@ -19,15 +21,15 @@ app.use('/images', express.static("public/assets/images"));
 app.use('/css', express.static("public/assets/css"));
 
 app.use(session({
-    secret: '2C44-4D44-WppQ38S',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true
 }));
 
 // TODO: erro genérico
 app.use(function (err, req, res, next) {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
+    console.error(err);
+    res.render("../src/views/error500");
 });
 
 app.get('/', function (req, res) {
@@ -233,8 +235,7 @@ app.get('/logout', function (req, res) {
 
 // TODO: 404
 app.use(function (req, res, next) {
-    res.status(404).send('Sorry cant find that!');
-    // res.render("../src/views/plans");
+    res.render("../src/views/error404");
 });
 
 
